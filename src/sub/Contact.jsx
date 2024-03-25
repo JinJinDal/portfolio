@@ -44,7 +44,9 @@ function Contact(props) {
                             <div><span>E-mail</span><a href='#'>krlawls1@gmail.com</a></div>
                             <div><span>HP</span><a>010-4540-6254</a></div>
                         </address>
-                        <div className='sct4-img-box'></div>
+                        <div className='sct4-img-box'>
+                            <img src="@/public/img/testImg.jpg" alt="" />
+                        </div>
                     </div>
                     <div className='sct4-feedback'>
                         <div className='sct4-feedback-container'>

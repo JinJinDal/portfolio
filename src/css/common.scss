@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "./fix.scss";
 
 .permanent{
     font-family: 'Permanent Marker', cursive;
@@ -9,12 +10,14 @@
     transition: 0.3s;
     padding-bottom: 5px;
 }
+.scrollactive{
+    color: red;
+}
 
 body {
     background-color: black;
     color: white;
     position: relative;
-
     header {
         width: 100%;
         position: fixed;
@@ -73,15 +76,17 @@ body {
                     }
                 }
                 .sct1-img-conteiner {
-                    width: 804px;
+                    width: 800px;
                     height: 50vh;
-                    background-color: gray;
                     border-radius: 15px;
                     position: absolute;
                     right: 0;
                     top: 30%;
                     transform: translateY(-50%);
                     z-index: -1;
+                    background: url(../../public/img/testImg.jpg) no-repeat;
+                    background-size: cover;
+                    background-position: 1% 16%;
                 }
         }
         
@@ -92,11 +97,11 @@ body {
             align-items: center;
             margin-bottom: 200px;
             .sct1-img-conteiner {
-                background-color: gray;
                 border-radius: 15px;
-                width: 750px;
+                width: 900px;
                 height: 600px;
-
+                background: url(../../public/img/workImg.jpg);
+                background-position: 15% 1%;
             }
 
             .sct1-text-box {
@@ -143,11 +148,11 @@ body {
                     }
 
                     .one {
-                        left: -40px;
+                        left: -7%;
                     }
 
                     .two {
-                        right: -40px;
+                        right: -7%;
                     }
 
                     h3 {
@@ -182,7 +187,7 @@ body {
                                     p {
                                         color: black;
                                         font-size: 1.5rem;
-                                        margin-right: 50px;
+                                        margin-right: 2%;
                                     }
 
                                     img {
@@ -214,6 +219,9 @@ body {
             padding-bottom: 100px;
             .sct3-img-container{
                 position: relative;
+                @include responsive('l'){
+                    display: none;
+                }
                 .project-pc-img{
                     width: 40vw;
                     height: 30vw;
@@ -238,6 +246,9 @@ body {
             }
             .sct3-text-container{
                 width: 40%;
+                @include responsive('l'){
+                    width: 100%;
+                }
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -247,8 +258,21 @@ body {
                         padding-bottom: 50px;
                         font-weight: bold;
                     }
+                    .smallImg{
+                        display: none;
+                        @include responsive('l'){
+                            display: block;
+                            margin-bottom: 50px;
+                            img{
+                                width: 100%; height: 100%;
+                            }
+                        }
+                    }
                     p{
                         line-height: 25px;
+                        @include responsive('l'){
+                            padding-bottom: 50px;
+                        }
                     }
                 }
                 .sct3-btn-container{
@@ -329,6 +353,11 @@ body {
                         a{
                             color: black;
                         }
+                    }
+                }
+                .sct4-img-box{
+                    img{
+
                     }
                 }
             }

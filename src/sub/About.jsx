@@ -4,44 +4,6 @@ import dataJson from '../data/skill-list.json'
 
 
 function About(props) {
-    // const renderStack = () => {
-    //     const techStack = dataJson.skill[0].language;
-    //     return techStack.map((item) => (
-    //         <li key={item.id}>
-    //             <div className='stack' style={{ ...stackStyle, backgroundImage: `linear-gradient(to bottom right, ${item.color}, white)` }}>
-    //                 <p>{item.name}</p>
-    //                 <img src='' />
-    //             </div>
-    //         </li>
-    //     ));
-    // }
-
-    // console.log(dataJson.skill[0])
-
-    // const renderFram =()=>{
-    //     const techFram = dataJson.skill[0].framework;
-    //     return techFram.map((item)=>(
-    //         <li key={item.id}>
-    //             <div className='stack' style={{ ...stackStyle, backgroundImage: `linear-gradient(to bottom right, ${item.color}, white)` }}>
-    //                 <p>{item.name}</p>
-    //                 <img src='' />
-    //             </div>
-    //         </li>
-    //     ));
-    // }
-
-    // const rendEtc =()=>{
-    //     const techEtc = dataJson.skill[0].ETC;
-    //     return techEtc.map((item)=>(
-    //         <li key={item.id}>
-    //             <div className='stack' style={{ ...stackStyle, backgroundImage: `linear-gradient(to bottom right, ${item.color}, white)` }}>
-    //                 <p>{item.name}</p>
-    //                 <img src='' />
-    //             </div>
-    //         </li>
-    //     ))
-    // }
-
     const [heightY, setHeightY] = useState(false);
     const toggleSty = () => {
         setHeightY(prevState => !prevState);
@@ -55,8 +17,6 @@ function About(props) {
         height: heightY ? '100%' : '54px',
         transition: 'transform 1s cubic-bezier(0.42, 0, 0.02, 0.99) 0s'
     }
-
-    const [stackColor, setStackColor] = useState();
 
     const renders =(items)=>{
         const techEtc = items;

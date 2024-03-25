@@ -8,9 +8,6 @@ function Home(props) {
     const text = "Hi ! I'm JinWoo";
     // console.log(content)
     // 타이핑 효과
-    function aaa(i){
-       
-    }
 
     useEffect(() => {
         let i = -1;
@@ -45,7 +42,8 @@ function Home(props) {
                         <p>새로운 도전을 좋아하는 나</p>
                         <p>망설임 없이 직진하는 나</p>
                     </div>
-                    <div className='sct1-img-conteiner'></div>
+                    <div className='sct1-img-conteiner'>
+                    </div>
                 </div>
                 
                 <div className='sct1-content2'>

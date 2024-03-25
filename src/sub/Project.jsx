@@ -13,6 +13,7 @@ function Project({data}) {
                 <div className='sct3-text-container'>
                     <div className='sct3-text-box'>
                         <h3>{item.name}</h3>
+                        <div className='smallImg'><img src={item.imgWb} alt="" /></div>
                         <p>{item.info}</p>
                     </div>
                     <div className='sct3-btn-container'>

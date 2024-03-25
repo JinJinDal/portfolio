@@ -11,8 +11,8 @@ import smoothScroll from 'smooth-scroll-into-view-if-needed';
 
 function App() {
   const [selectedLink, setSelectedLink] = useState(null);
-  const [scroll,setScroll] = useState(false);
   const [sctOfst, setsctOfst] = useState({});
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -43,6 +43,15 @@ function App() {
           setSelectedLink(section);
         }
       }
+
+      const nextScrollTop = window.scrollY;
+
+      if (nextScrollTop > scrollPosition) {
+        setIsScrollingDown(true);
+        console.log('down')
+      } else {
+        setIsScrollingDown(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -68,7 +77,7 @@ function App() {
       <header>
         <div>
           <h1 className='permanent'>Jinu</h1>
-          <nav>
+          <nav className={isScrollingDown ? 'scrollactive' : ''}>
             <Link
               to='#Home'
               className={selectedLink === 'Home' ? 'focus' : ''}
