@@ -38,33 +38,36 @@ function Contact(props) {
                 <h2>작은 의견도 수중하게 생각하는 <span className='permanent'>me</span></h2>
                 <div className='sct4-main-container'>
                     <div className='sct4-info'>
-                        {/* <h3>INFO</h3> */}
+                        <h3>Get In Touch</h3>
                         <address>
-                            <div><span>NAME</span><span>김진우</span></div>
-                            <div><span>E-mail</span><a href='#'>krlawls1@gmail.com</a></div>
-                            <div><span>HP</span><a>010-4540-6254</a></div>
+                            <ul>
+                                <li>NAME</li>
+                                <li>E-mail</li>
+                                <li>HP</li>
+                            </ul>
+                            <ul>
+                                <li>Kim Jin Woo</li>
+                                <li>krlawls1@gmail.com</li>
+                                <li>010-4540-6254</li>
+                            </ul>
                         </address>
-                        <div className='sct4-img-box'>
-                            <img src="@/public/img/testImg.jpg" alt="" />
-                        </div>
                     </div>
                     <div className='sct4-feedback'>
+                        <div className='triangle'></div>
                         <div className='sct4-feedback-container'>
                             <form ref={form} onSubmit={sendEmail}>
                                 <div>
-                                <label className={name ? 'hidden' : ''}>Name</label>
-                                <input type="text" name="user_name" value={name} onChange={handleNameChange} />
+                                    <input type="text" placeholder='Name' name="user_name" value={name} onChange={handleNameChange} />
                                 </div>
                                 <div>
-                                    <label className={email ? 'hidden' : ''}>Email</label>
-                                    <input type="email" name="user_email" value={email} onChange={handleEmailChange} />
+                                    <input type="email" placeholder='E-mail' name="user_email" value={email} onChange={handleEmailChange} />
                                 </div>
                                 <div>
-                                    <label className={message ? 'hidden' : ''}>Message</label>
-                                    <textarea name="message" value={message} onChange={handleMessageChange} />
+                                    <textarea name="message" placeholder='Message' value={message} onChange={handleMessageChange} />
                                 </div>
-                                
-                                <input className='submit' type="submit" value="Send" row="250" />
+                                <div className='submitBox'>
+                                    <input className='submit' type="submit" value="FEEDBACK" row="250" />
+                                </div>
                             </form>
                         </div>
                     </div>

@@ -5,8 +5,7 @@ function Home(props) {
     // 커서 표시 여부 상태
     const [cursorVisible, setCursorVisible] = useState(true); 
 
-    const text = "Hi ! I'm JinWoo";
-    // console.log(content)
+    const text = "Hi ! I'm Front End Developer";
     // 타이핑 효과
 
     useEffect(() => {
@@ -37,7 +36,7 @@ function Home(props) {
                     <div className='sct1-text-conteinr'>
                         <h2>
                             <b className='permanent'>{content}</b>
-                            {cursorVisible && <span className="cursor">|</span>} {/* 커서 표시 */}
+                            {/* {cursorVisible && <span className="cursor">|</span>} 커서 표시 */}
                         </h2>
                         <p>새로운 도전을 좋아하는 나</p>
                         <p>망설임 없이 직진하는 나</p>

@@ -5,50 +5,70 @@
                 {
                     "id": 0,
                     "title": "language",
-                    "name": "TypeScript",
-                    "color": "rgb(49,120,198)",
-                    "img": "./img/typeSc.png"
+                    "name": "HTML5",
+                    "img": "./img/HTML5.png",
+                    "pro":"■■■■■"
                 },
                 {
                     "id": 1,
                     "title": "language",
                     "name": "Javascript",
                     "color": "rgb(255,222,0)",
-                    "img": "./img/JavaScript.png"
+                    "img": "./img/JavaScript.png",
+                    "pro":"■■■■□"
                 },
                 {
                     "id": 2,
                     "title": "language",
                     "name": "CSS3",
                     "color": "rgb(51,153,255)",
-                    "img": "./img/CSS3.png"
+                    "img": "./img/CSS3.png",
+                    "pro":"■■■■■"
                 },
                 {
                     "id": 3,
                     "title": "language",
                     "name": "SCSS",
                     "color": "rgb(190,96,139)",
-                    "img": "./img/SCSS.png"
+                    "img": "./img/SCSS.png",
+                    "pro":"■■■■■"
+                },
+                {
+                    "id": 4,
+                    "title": "language",
+                    "name": "React",
+                    "color": "rgb(97,218,251)",
+                    "img": "./img/React.png",
+                    "pro":"■■■■□"
                 }
             ],
             "framework": [
                 {
                     "id": 0,
-                    "name": "React",
-                    "color": "rgb(255,222,0)",
-                    "img": "./img/React.png"
+                    "name": "TypeScript",
+                    "img": "./img/typeSc.png",
+                    "pro":"■■■□□"
                 },
                 {
                     "id": 1,
-                    "name": "Zustand",
+                    "name": "VUE",
                     "color": "rgb(255,222,0)",
-                    "img": "./img/React.png"
+                    "img": "./img/vue.png",
+                    "pro":"■■□□□"
                 },
                 {
                     "id": 2,
                     "name": "JQuery",
                     "color": "rgb(255,222,0)",
-                    "img": "./img/React.png"
+                    "img": "./img/jquery.png",
+                    "pro":"■■■■□"
+                },
+                {
+                    "id": 3,
+                    "name": "Github",
+                    "color": "rgb(255,222,0)",
+                    "img": "./img/github.png",
+                    "pro":"■■■□□"
                 }
             ],
             "ETC": [
@@ -56,19 +76,22 @@
                     "id": 0,
                     "name": "adobe XD",
                     "color": "rgb(255,97,246)",
-                    "img": "./img/XD.png"
+                    "img": "./img/XD.png",
+                    "pro":"■■■□□"
                 },
                 {
                     "id": 1,
                     "name": "illustrator",
                     "color": "rgb(255,154,0)",
-                    "img": "./img/Illustrator.png"
+                    "img": "./img/Illustrator.png",
+                    "pro":"■■■□□"
                 },
                 {
                     "id": 2,
                     "name": "Figma",
                     "color": "rgb(242,78,30)",
-                    "img": "./img/figma.png"
+                    "img": "./img/figma.png",
+                    "pro":"■■■■□"
                 }
             ]
         }
@@ -90,7 +113,7 @@
             "imgWb": "./img/fitnnyMain.png",
             "imgMb": "./img/fitnnyMb.png",
             "giturl": "https://github.com/JinJinDal/fitnny",
-            "weburl": "https://dragon1431.github.io/teamA_hit/"
+            "weburl": "https://fitnny.vercel.app/"
         },
         {
             "id": 2,
@@ -99,13 +122,13 @@
             "imgWb": "./img/AnungPc.png",
             "imgMb": "./img/AnungMain.png",
             "giturl": "https://github.com/JinJinDal/AnNongHaNong",
-            "weburl": "https://dragon1431.github.io/teamA_hit/"
+            "weburl": "https://an-nong-ha-nong.vercel.app/"
         },
         {
             "id": 3,
             "name": "초보들의 코딩 공부 초딩",
             "info": "서울 경기권 이외에 지역에 농촌에 인구감소에 따른 농촌일손부족 상황을 극복할 방법이 없을까 고민하던 차에 농촌체험을 하면 좋지 않을까 해서 농촌체험 프로그렘을 비교해서 더 나은 프로그렘을 제시하는 서비스를 만들어 봤습니다.",
-            "imgWb": "./img/chodingPc.png",
+            "imgWb": "./img/choding.png",
             "imgMb": "./img/chodingMb.png",
             "giturl": "https://github.com/JinJinDal/chchoding",
             "weburl": "https://chchoding.vercel.app/"

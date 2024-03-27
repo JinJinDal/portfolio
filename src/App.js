@@ -12,12 +12,14 @@ import smoothScroll from 'smooth-scroll-into-view-if-needed';
 function App() {
   const [selectedLink, setSelectedLink] = useState(null);
   const [sctOfst, setsctOfst] = useState({});
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0); // 이전 스크롤 위치를 저장합니다.
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
+  const headerDivRef = useRef(null);
 
   useEffect(() => {
     const updatesctOfst = () => {
@@ -38,75 +40,58 @@ function App() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
+      // 현재 스크롤 위치와 이전 스크롤 위치를 비교하여 스크롤이 올라갔는지 내려갔는지 확인합니다.
+      setIsScrolledDown(scrollPosition > prevScrollY);
+      setPrevScrollY(scrollPosition);
+
       for (const section in sctOfst) {
         if (scrollPosition >= sctOfst[section]) {
           setSelectedLink(section);
         }
       }
-
-      const nextScrollTop = window.scrollY;
-
-      if (nextScrollTop > scrollPosition) {
-        setIsScrollingDown(true);
-        console.log('down')
-      } else {
-        setIsScrollingDown(false);
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [sctOfst]);
-
-
-  const scrollToRef = (ref) => {
-    smoothScroll(ref.current, {
-      behavior: 'smooth',
-      scrollMode: 'if-needed',
-      block: 'start',
-    });
-  };
-
-  const linkClick = (ref, linkId) => {
-    setSelectedLink(linkId);
-    scrollToRef(ref);
-  };
+  }, [sctOfst, prevScrollY]);
 
   return (
     <BrowserRouter>
       <header>
         <div>
-          <h1 className='permanent'>Jinu</h1>
-          <nav className={isScrollingDown ? 'scrollactive' : ''}>
-            <Link
-              to='#Home'
-              className={selectedLink === 'Home' ? 'focus' : ''}
-              onClick={() => linkClick(homeRef, 'Home')}
-            >
-              Home
-            </Link>
-            <Link
-              to='#About'
-              className={selectedLink === 'About' ? 'focus' : ''}
-              onClick={() => linkClick(aboutRef, 'About')}
-            >
-              About
-            </Link>
-            <Link
-              to="#Project"
-              className={selectedLink === 'Project' ? 'focus' : ''}
-              onClick={() => linkClick(projectRef, 'Project')}
-            >
-              Project
-            </Link>
-            <Link
-              to="#Contact"
-              className={selectedLink === 'Contact' ? 'focus' : ''}
-              onClick={() => linkClick(contactRef, 'Contact')}
-            >
-              Contact
-            </Link>
-          </nav>
+          <div ref={headerDivRef} className={isScrolledDown ? 'scrolledDown' : ''}>
+            <h1 className='permanent'>Jinu</h1>
+            <nav>
+              <Link
+                to='#Home'
+                className={selectedLink === 'Home' ? 'focus' : ''}
+                onClick={() => linkClick(homeRef, 'Home')}
+              >
+                Home
+              </Link>
+              <Link
+                to='#About'
+                className={selectedLink === 'About' ? 'focus' : ''}
+                onClick={() => linkClick(aboutRef, 'About')}
+              >
+                About
+              </Link>
+              <Link
+                to="#Project"
+                className={selectedLink === 'Project' ? 'focus' : ''}
+                onClick={() => linkClick(projectRef, 'Project')}
+              >
+                Project
+              </Link>
+              <Link
+                to="#Contact"
+                className={selectedLink === 'Contact' ? 'focus' : ''}
+                onClick={() => linkClick(contactRef, 'Contact')}
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
         </div>
       </header>
       <main>
@@ -125,6 +110,19 @@ function App() {
       </main>
     </BrowserRouter>
   );
+
+  function linkClick(ref, linkId) {
+    setSelectedLink(linkId);
+    scrollToRef(ref);
+  }
+
+  function scrollToRef(ref) {
+    smoothScroll(ref.current, {
+      behavior: 'smooth',
+      scrollMode: 'if-needed',
+      block: 'start',
+    });
+  }
 }
 
 export default App;
