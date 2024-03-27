@@ -41,9 +41,9 @@ function Contact(props) {
                         <h3>Get In Touch</h3>
                         <address>
                             <ul>
-                                <li>NAME</li>
-                                <li>E-mail</li>
-                                <li>HP</li>
+                                <li><img src="./img/human.png" alt="" /></li>
+                                <li className='email'><img src="./img/Email.png" alt="" /></li>
+                                <li><img src="./img/callIcon.png" alt="" /></li>
                             </ul>
                             <ul>
                                 <li>Kim Jin Woo</li>
