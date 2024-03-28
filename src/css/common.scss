@@ -191,8 +191,13 @@ body {
                                     left: 50%;
                                     li {
                                         overflow: hidden;
+                                        .overStack{
+                                            transform: scaleY(100%) !important;
+                                        }
                                         .stack {
                                             display: flex;
+                                            transform: scaleY(0%);
+                                            transition: 1s;
                                             justify-content: space-between;
                                             border: 1px solid rgba(255,255,255,0.6);
                                             height: 60px;
@@ -285,6 +290,7 @@ body {
                         font-size: 2.5rem;
                         padding-bottom: 32px;
                         font-weight: bold;
+                        word-break: keep-all;
                     }
                     .smallImg{
                         display: none;
@@ -464,6 +470,7 @@ body {
                                 height: 5rem;
                                 width: 100%;
                                 background-color: black;
+                                color:white;
                                 &::placeholder{
                                     color: white;
                                     font-size: 1rem;
