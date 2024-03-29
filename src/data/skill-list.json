@@ -126,7 +126,7 @@
             "name": "안농하농",
             "subName":"안농하농",
             "info": "서울 경기권 이외에 지역에 농촌에 인구감소에 따른 농촌일손부족 상황을 극복할 방법이 없을까 고민하던 차에 농촌체험을 하면 좋지 않을까 해서 농촌체험 프로그렘을 비교해서 더 나은 프로그렘을 제시하는 서비스를 만들어 봤습니다.",
-            "imgWb": "./img/anungPc.PNG",
+            "imgWb": "./img/anungpc.PNG",
             "imgMb": "./img/AnungMain.png",
             "giturl": "https://github.com/JinJinDal/AnNongHaNong",
             "weburl": "https://an-nong-ha-nong.vercel.app/",
