@@ -100,28 +100,33 @@
         {
             "id": 0,
             "name": "초보들의 코딩 공부 초딩",
+            "subName":"초딩",
             "info": "안녕하세요, 저는 '초딩'이라는 사이트를 만든 코딩 초보 개발자입니다. 우리는 코딩에 관심이 있는 분들을 위해 시작부터 성장까지 함께하는 공간을 제공합니다. 튜토리얼과 학습 자료부터 프로젝트 아이디어와 협업 기회까지 다양한 리소스를 제공하여 모두가 더 쉽고 재미있게 코딩을 배우고 성장할 수 있도록 돕고 있습니다. 함께하는 여정에 참여해주세요!",
             "imgWb": "./img/choding.png",
             "imgMb": "./img/chodingMb.png",
             "giturl": "https://github.com/JinJinDal/chchoding",
             "weburl": "https://chchoding.vercel.app/",
-            "Personnel":"3명(개발 3명)"
+            "Personnel":"3명",
+            "Personnels":"(개발 3명)"
         },
         {
             "id": 1,
             "name": "서울시 소개 페이지",
+            "subName":"서울시 리뉴얼",
             "info": "타 지역 홈페이지보다 노후화된 느낌의 페이지를 팀원들과 좀 더 활용성을 높이고 디자인적으로 세련된 느낌을 주고자 했고 그중에서도 디자인적으로 가장 효율적으로 사용할 수 있는 부분은 서울시 소개 페이지라고 생각해서 팀원들과 서울시 소개 페이지를 리뉴얼 해 보았습니다.",
             "imgWb": "./img/soul-main.png",
             "imgMb": "./img/soul-mb-main.png",
             "giturl": "https://github.com/dragon1431/teamA_hit",
             "weburl": "https://dragon1431.github.io/teamA_hit/",
-            "Personnel":"4명(개발 4명)"
+            "Personnel":"4명",
+            "Personnels":"(개발 4명)"
         },
         {
             "id": 2,
             "name": "안농하농",
+            "subName":"안농하농",
             "info": "서울 경기권 이외에 지역에 농촌에 인구감소에 따른 농촌일손부족 상황을 극복할 방법이 없을까 고민하던 차에 농촌체험을 하면 좋지 않을까 해서 농촌체험 프로그렘을 비교해서 더 나은 프로그렘을 제시하는 서비스를 만들어 봤습니다.",
-            "imgWb": "./img/AnungPc.png",
+            "imgWb": "./img/anungPc.png",
             "imgMb": "./img/AnungMain.png",
             "giturl": "https://github.com/JinJinDal/AnNongHaNong",
             "weburl": "https://an-nong-ha-nong.vercel.app/",
@@ -131,12 +136,14 @@
         {
             "id": 3,
             "name": "Fitnny",
+            "subName":"Fitnny",
             "info": "코로나로 인해 실외 운동이 제한되고 집에서도 운동 정보와 지도가 필요한 시대에 운동 프로그램을 제공하는 것은 매우 유용한 아이디어입니다. 이에 따라, 저희는 집에서도 헬스장 수준의 개인 트레이닝을 받을 수 있는 웹페이지를 개발했습니다. 초기에는 레이아웃과 자바스크립트 사용이 어려웠지만, 인터넷 검색과 다른 코드 참고를 통해 문제를 해결하고자 노력했습니다. 우리 서비스는 사용자가 집에서 쉽게 운동할 수 있도록 정보와 지도를 제공하며, 피드백을 반영하여 계속해서 서비스를 개선할 것입니다",
             "imgWb": "./img/fittny.png",
             "imgMb": "./img/fitnnyMb.png",
             "giturl": "https://github.com/JinJinDal/fitnny",
             "weburl": "https://fitnny.vercel.app/",
-            "Personnel":"3명(기획 1명, 디자인 1명, 개발 1명)"
+            "Personnel":"3명",
+            "Personnels":"(기획 1명, 디자인 1명, 개발 1명)"
         }
     ]
 }

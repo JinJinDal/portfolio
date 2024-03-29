@@ -40,9 +40,14 @@ body {
                 align-items: center;
                 h1 {
                     font-size: 4rem;
+                    @include responsive('s'){
+                        font-size: 2rem;
+                    }
                 }
-    
                 nav {
+                    @include responsive('s'){
+                        display: none;
+                    }
                     a {
                         color: white;
                         text-decoration: none;
@@ -72,7 +77,9 @@ body {
                     position: absolute;
                     top: 20%;
                     left: 15%;
-            
+                    @include responsive('s'){
+                        left: 0;
+                    }
                     h2 {
                         padding-bottom: 3rem;
             
@@ -82,6 +89,9 @@ body {
                             font-size: 4.5rem;
                             padding-left: 10px;
                             color: white;
+                            @include responsive('s'){
+                                font-size: 2.5rem;
+                            }
                         }
                     }
                     p{
@@ -103,6 +113,9 @@ body {
                     background: url(../../public/img/darun.png) no-repeat;
                     background-size: cover;
                     background-position: 1% 16%;
+                    @include responsive('s'){
+                        height: 30%; width: 100%;
+                    }
                 }
         }
         
@@ -118,6 +131,9 @@ body {
                 height: 600px;
                 background-position: 15% 1%;
                 background: url(../../public/img/workImg.jpg);
+                @include responsive('s'){
+                    height: 300px;
+                }
             }
 
             .sct1-text-box {
@@ -126,6 +142,9 @@ body {
                 position: absolute;
                 right: 0;
                 top: 35%;
+                @include responsive('s'){
+                    font-size: 1.5rem;
+                }
                 p{
                     &:nth-child(1){
                         padding-bottom: 16px;
@@ -180,6 +199,9 @@ body {
                                 text-align: start;
                                 border-top: 1px solid rgba(255,255,255,0.6);
                                 padding-top: 30px;
+                                @include responsive('s'){
+                                    font-size: 1.5rem;
+                                }
                             }
         
                             .skills-box {
@@ -214,15 +236,29 @@ body {
                                                     @include responsive('l'){
                                                         margin-right: 1rem;
                                                     }
+                                                    @include responsive('s'){
+                                                        margin-right: 0.5rem;
+                                                    }
                                                     img {
                                                         width: 100%;
                                                         height: 100%;
+                                                        @include responsive('s'){
+                                                            width: 80%; height: 80%;
+                                                        }
                                                     }
                                                 }
                                                 p {
                                                     color: white;
                                                     font-size: 1rem;
+                                                    @include responsive('s'){
+                                                        font-size: 0.7rem;
+                                                    }
                                                 } 
+                                            }
+                                            .stackPro{
+                                                @include responsive('s'){
+                                                    display: none;
+                                                }
                                             }
                                         }
                                     }
@@ -254,6 +290,27 @@ body {
                 @include responsive('l'){
                     display: none;
                 }
+                &:hover{
+                    .Click{
+                        opacity: 1;
+                    }
+                }
+                .Click{
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.678);
+                    width: 100%; height: 100%;
+                    border-radius: 15px;
+                    top: 0; left: 0;
+                    transition: 0.5s;
+                    opacity: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
                 .project-pc-img{
                     width: 44vw;
                     height: 30vw;
@@ -263,19 +320,7 @@ body {
                         border-radius: 15px;
                         width: 100%; height: 100%;
                     }
-                }
-                .project-mb-img{
-                    width: 144px; height: 31vh;
-                    border-radius: 15px;
-                    position: absolute;
-                    bottom: -6%;
-                    right: -2%;
-                    img{
-                        border-radius: 15px;
-                        width: 100%; height: 100%;
-                        box-shadow: -2px 9px 20px 4px black;
-                    }
-                }
+                }   
             }
             .sct3-text-container{
                 width: 40%;
@@ -323,7 +368,7 @@ body {
                     justify-content: flex-end;
                     flex-direction: column;
                     .PersonnelBox{
-                        padding-bottom: 1rem;
+                        padding: 1rem 0;
                         color: rgba(255, 255, 255,0.6);
                         span{
                             color: white;
@@ -392,7 +437,7 @@ body {
                 background-color: white;
                 position: relative;
                 padding: 2rem 0;
-                padding-left: 4rem;
+                padding-left: 3rem;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
